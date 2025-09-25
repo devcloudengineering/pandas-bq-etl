@@ -18,7 +18,7 @@ def extract_file_data_int_main():
     logging.info("Leyendo informacion desde DATA IN \n")
     logging.info("Leyendo informacion de df_clientes \n")
 
-    df_clientes = pd.read_csv('/Users/gustavo/Desktop/Hites/data_in/clientes_hites.csv', sep=',', decimal=',', header=0)
+    df_clientes = pd.read_csv('/Users/gustavo/Desktop/DataEngineer/pandas-bq/Hites/data_in/clientes_hites.csv', sep=',', decimal=',', header=0)
 
     logging.info("###############################################")
     logging.info("Columnas referenciales al dataframe df_clientes")
@@ -35,7 +35,7 @@ def extract_file_data_int_main():
     print('\n')
     logging.info("Leyendo informacion de df_productos \n")
 
-    df_productos = pd.read_csv('/Users/gustavo/Desktop/Hites/data_in/productos_hites.csv', sep=',', decimal=',', header=0)
+    df_productos = pd.read_csv('/Users/gustavo/Desktop/DataEngineer/pandas-bq/Hites/data_in/productos_hites.csv', sep=',', decimal=',', header=0)
 
     logging.info("###############################################")
     logging.info("Columnas referenciales al dataframe df_productos")
@@ -53,7 +53,7 @@ def extract_file_data_int_main():
     print('\n')
     logging.info("Leyendo informacion de df_ventas \n")
 
-    df_ventas = pd.read_csv('/Users/gustavo/Desktop/Hites/data_in/ventas_hites.csv', sep=',', decimal=',', header=0)
+    df_ventas = pd.read_csv('/Users/gustavo/Desktop/DataEngineer/pandas-bq/Hites/data_in/ventas_hites.csv', sep=',', decimal=',', header=0)
 
     logging.info("###############################################")
     logging.info("Columnas referenciales al dataframe df_ventas")

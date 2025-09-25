@@ -11,25 +11,10 @@ gsutil cp clientes_hites.csv gs://data_in_hites/
 
 conda activate airflow_env
 
-# Fija versión estable y tu Python
-
-export AIRFLOW_VERSION=2.10.5
-export PYTHON_VERSION=3.11
-export CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
-
-# Sube Airflow y sus dependencias con constraints
-
-pip install --upgrade "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
-
-# re-instala el provider FAB según constraints
-
-pip install --upgrade "apache-airflow-providers-fab" --constraint "${CONSTRAINT_URL}"
-
-# Asegura tu HOME y hostname
-
-export AIRFLOW_HOME="/Users/gustavo/Desktop/Hites/airflow"
-
-# Migra BD y levanta
-
-airflow db upgrade
+export AIRFLOW_HOME="/Users/gustavo/Desktop/DataEngineer/pandas-bq/Hites/airflow"
+export AIRFLOW_CORE_DAGS_FOLDER="$AIRFLOW_HOME/dags"
+mkdir -p "$AIRFLOW_HOME"/{dags,logs,plugins}
+airflow info | egrep -i "airflow_home|dags_folder"
+pkill -f "airflow webserver" || true
+pkill -f "airflow scheduler" || true
 airflow standalone

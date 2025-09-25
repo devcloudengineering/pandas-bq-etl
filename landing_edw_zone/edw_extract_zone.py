@@ -37,8 +37,8 @@ def to_bq():
 
 
     PROJECT = "mi-primer-proyecto-469023"
-    DATASET = "demo_hites"
-    BQ_LOCATION = "southamerica-east1"
+    DATASET = "demo_bq"
+    BQ_LOCATION = "southamerica-west1"
 
     client = bigquery.Client(project=PROJECT)
 
