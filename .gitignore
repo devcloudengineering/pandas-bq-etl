@@ -1,2 +1,4 @@
 airflow/
 doc/*.xlsx
+keygcp.json
+infra/*.terraform*

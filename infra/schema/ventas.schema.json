@@ -1,0 +1,92 @@
+[
+    {
+        "name": "venta_id",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "fecha_venta",
+        "type": "TIMESTAMP",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "cliente_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "producto_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "sku",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "canal",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "medio_pago",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "precio_unitario",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "cantidad",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "descuento_pct",
+        "type": "NUMERIC",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "subtotal",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "impuesto_iva",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "total_neto",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "estado_pedido",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "metodo_envio",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "region_envio",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "comuna_envio",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "tienda_retiro",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }
+]

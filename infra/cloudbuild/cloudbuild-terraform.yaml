@@ -1,0 +1,32 @@
+steps:
+  - name: hashicorp/terraform:1.13.1
+    id: init
+    dir: infra
+    args: ["init", "-input=false"]
+
+  - name: hashicorp/terraform:1.13.1
+    id: validate
+    dir: infra
+    args: ["validate", "-no-color"]
+
+  - name: hashicorp/terraform:1.13.1
+    id: fmt-check
+    dir: infra
+    args: ["fmt", "-check", "-diff", "-no-color"]
+
+  - name: hashicorp/terraform:1.13.1
+    id: plan
+    dir: infra
+    args: ["plan", "-input=false", "-out=tfplan.binary"]
+
+  - name: hashicorp/terraform:1.13.1
+    id: apply
+    dir: infra
+    args: ["apply", "-input=false", "tfplan.binary"]
+# gcloud builds triggers create github \
+#  --repo-name="mi-repo" \
+#  --branch-pattern="^main$" \
+#  --build-config="cloudbuild/cloudbuild.yaml" \
+#  --substitutions=_TF_DIR=infra/envs/dev,_TF_VERSION=1.6.6
+
+#gcloud builds submit --config=infra/cloudbuild/cloudbuild-terraform.yaml .
