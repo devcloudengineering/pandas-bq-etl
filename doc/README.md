@@ -1,5 +1,14 @@
 pip install "pandas==2.2.2" "SQLAlchemy==2.0.32" "psycopg[binary]==3.1.19" "numpy==1.26.4"
 
+bq --location=southamerica-west1 mk --dataset mi-primer-proyecto-469023:stg_assert
+bq --location=southamerica-west1 mk --dataset mi-primer-proyecto-469023:mart
+bq --location=southamerica-west1 mk --dataset mi-primer-proyecto-469023:stg
+bq --location=southamerica-west1 mk --dataset mi-primer-proyecto-469023:raw
+
+gsutil cp ventas_hites.csv gs://data_in_hites/
+gsutil cp productos_hites.csv gs://data_in_hites/
+gsutil cp clientes_hites.csv gs://data_in_hites/
+
 conda activate airflow_env
 
 # Fija versión estable y tu Python
