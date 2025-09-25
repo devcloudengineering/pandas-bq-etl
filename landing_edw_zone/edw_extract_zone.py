@@ -50,7 +50,7 @@ def to_bq():
         table = client.get_table(table_id)
 
         if table.num_rows > 0:
-            logging.info(f"La tabla {table_id} ya contiene {table.num_rows} filas. No se cargó nada.")
+            logging.info(f"La tabla {table_id} ya contiene {table.num_rows} filas. No se cargo nada.")
             return
 
         job_config = bigquery.LoadJobConfig(write_disposition=write_disposition)
