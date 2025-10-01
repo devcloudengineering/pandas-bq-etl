@@ -1,9 +1,9 @@
 pip install "pandas==2.2.2" "SQLAlchemy==2.0.32" "psycopg[binary]==3.1.19" "numpy==1.26.4"
 
-bq --location=southamerica-west1 mk --dataset mi-primer-proyecto-469023:stg_assert
-bq --location=southamerica-west1 mk --dataset mi-primer-proyecto-469023:mart
-bq --location=southamerica-west1 mk --dataset mi-primer-proyecto-469023:stg
-bq --location=southamerica-west1 mk --dataset mi-primer-proyecto-469023:raw
+bq --location=southamerica-west1 mk --dataset eng-archery-473819-h2:stg_assert
+bq --location=southamerica-west1 mk --dataset eng-archery-473819-h2:mart
+bq --location=southamerica-west1 mk --dataset eng-archery-473819-h2:stg
+bq --location=southamerica-west1 mk --dataset eng-archery-473819-h2:raw
 
 gsutil cp ventas_hites.csv gs://data_in_hites/
 gsutil cp productos_hites.csv gs://data_in_hites/

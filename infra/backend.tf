@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "mi-primer-proyecto-469023-tfstate"
+    bucket = "eng-archery-473819-h2-tfstate"
     prefix = "prd/bq/state"
   }
 }

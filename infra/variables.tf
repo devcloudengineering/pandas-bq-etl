@@ -1,6 +1,6 @@
 variable "project_id" {
   type    = string
-  default = "mi-primer-proyecto-469023"
+  default = "eng-archery-473819-h2"
 }
 
 variable "region" {
@@ -25,5 +25,5 @@ variable "path_credentials" {
 
 variable "bucket_datain" {
   type    = string
-  default = "mi-primer-proyecto-469023-data-in"
+  default = "eng-archery-473819-h2-data-in"
 }

@@ -36,7 +36,7 @@ def to_bq():
     )
 
 
-    PROJECT = "mi-primer-proyecto-469023"
+    PROJECT = "eng-archery-473819-h2"
     DATASET = "demo_bq"
     BQ_LOCATION = "southamerica-west1"
 
